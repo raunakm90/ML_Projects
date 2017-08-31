@@ -1,0 +1,37 @@
+Mongo DB installation -
+
+1. Go to https://www.mongodb.com/download-center#community
+2. Download community server based on your machine
+3. Open .msi file and follow the instructions to install
+4. Add C:\MongoDB\Server\3.2\bin (i.e. the path where MongoDB is installed) to your PATH environment variables.
+
+Set up MongoDB
+
+1. Open an Administrator command prompt.
+	Press the Win key, type cmd.exe, and press Ctrl + Shift + Enter to run the Command Prompt as Administrator.
+
+	Execute the remaining steps from the Administrator command prompt.
+
+The following steps are with respect to the project folder and where you want to save your database. On my PC, project folder is at D:\Yelp\
+
+2. Clone the repository. Git command - git clone https://github.com/raunakm90/Yelp-Dataset-Challenge--8.git
+
+3. Create folders to have the following directory structure -
+
+	d:\
+		Yelp\
+			Analysis\
+			Data\
+				db\
+				log\
+
+4. Run the following commnad in command prompt -
+	 mongod --directoryperdb --dbpath D:/Yelp/Data/db --logpath D:/Yelp/Data/log mongodb.log --logappend
+
+	This will run an instance of MongoDB on your local machine for Yelp.
+
+5. To download and unzip the .tar file, run download_data.py. Follow the instructions in the file and change path as necessary.
+
+6. To create Yelp database, run .\Analysis\MongoDB_setup.py. Change the folder paths if required. Follow the instructions mentioned in the file.
+
+I hope this works!!!
